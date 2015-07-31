@@ -24,163 +24,175 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <style>
-          body {
-            
-          }
-
-          .nav-pills > li.active > a,
-          .nav-pills > li.active > a:hover,
-          .nav-pills > li.active > a:focus {
-            color: #fff;
-            background-color: #d9534f;
-          }
-
-          nav {
-            border-radius: 5px;
-          }
-
+        body {
+        
+        }
+        .nav-pills > li.active > a,
+        .nav-pills > li.active > a:hover,
+        .nav-pills > li.active > a:focus {
+        color: #fff;
+        background-color: #d9534f;
+        }
+        nav {
+        border-radius: 5px;
+        }
         </style>
     </head>
     <body ng-controller="myCtrl">
-        <div class="container">
-            <div class="header clearfix">
-                <nav>
-                    <ul class="nav nav-pills pull-right">
-                        <li role="presentation" class="active"><a href="#">Home</a></li>
-                        <li role="presentation"><a href="#">About</a></li>
-                        <li role="presentation"><a href="#">Contact</a></li>
-                    </ul>
+        <div class="container nav-container">
+            <nav class="navbar navbar-default navbar-static-top" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Mangialardo's</a>
+                    </div>
+                    
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="navbar-collapse collapse" id="navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li class="goto"><a href="#menu">Menu</a></li>
+                            <li class="goto"><a href="#downloads">Downloads</a></li>
+                            <li class="goto"><a href="#address">Address</a></li>
+                        </ul>
+                    </div>
+                    </div><!-- /.container-fluid -->
                 </nav>
-                <h3 class="text-muted">Project name</h3>
             </div>
-            <div class="jumbotron">
-                <h1>Mangialardo's</h1>
-                <a href="https://www.google.com/maps/place/1317+Pennsylvania+Ave+SE/@38.880847,-76.987757,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7b83550c7ebd3:0x50442ee969e2889f"><p class="lead">1317 Pennsylvania Ave SE Washington, DC 20003</p></a>
-                <p class="lead">Phone# <a href="tel:+1-202-543-6212">(202) 543-6212</a></p>
-                <p class="lead">Fax# (202) 543-5388</p>
-                <p class="lead">Mon-Fri 7:30am-3pm</p>
-            </div>
-            <div class="row marketing">
-                <div class="col-md-12">
-                    <!-- Bread types -->
-                    <div class="panel panel-default">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">
-                            <h4 class="panel-title">Bread Types</h4>
-                        </div>
-                        <div class="panel-body">
-                            <!-- List group -->
-                            <table class="table">
-                                <tr>
-                                    <td ng-repeat="type in bread_types">
-                                        <div class="col-md-6 pull-left" ng-if="$index % 2 == 0">
-                                            <h4 class="list-group-item-heading">{{ type }}</h4>
-                                        </div>
-                                        <div class="col-md-6 pull-right" ng-if="$index % 2 != 0">
-                                            <h4 class="list-group-item-heading">{{ type }}</h4>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>Mangialardo's</h1>
+                    <a href="https://www.google.com/maps/place/1317+Pennsylvania+Ave+SE/@38.880847,-76.987757,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7b83550c7ebd3:0x50442ee969e2889f"><p class="lead">1317 Pennsylvania Ave SE Washington, DC 20003</p></a>
+                    <p class="lead">Phone# <a href="tel:+1-202-543-6212">(202) 543-6212</a></p>
+                    <p class="lead">Fax# (202) 543-5388</p>
+                    <p class="lead">Mon-Fri 7:30am-3pm</p>
+                </div>
+                <div class="row marketing">
+                    <div class="col-md-12">
+                        <!-- Bread types -->
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Bread Types</h4>
+                            </div>
+                            <div class="panel-body">
+                                <!-- List group -->
+                                <table class="table">
+                                    <tr>
+                                        <td ng-repeat="type in bread_types">
+                                            <div class="col-md-6 pull-left" ng-if="$index % 2 == 0">
+                                                <h4 class="list-group-item-heading">{{ type }}</h4>
+                                            </div>
+                                            <div class="col-md-6 pull-right" ng-if="$index % 2 != 0">
+                                                <h4 class="list-group-item-heading">{{ type }}</h4>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Toppings -->
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">
-                            <h4 class="panel-title">Toppings</h4>
-                        </div>
-                        <div class="panel-body">
-                            <!-- List group -->
-                            <table class="table">
-                                <tr ng-repeat="topping_group in topping_list">
-                                    <td ng-repeat="topping in topping_group">
-                                        <div class="col-md-6 pull-left" ng-if="$index % 2 == 0">
-                                            <h4 class="list-group-item-heading">{{ topping }}</h4>
-                                        </div>
-                                        <div class="col-md-6 pull-right" ng-if="$index % 2 != 0">
-                                            <h4 class="list-group-item-heading">{{ topping }}</h4>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">
-                            <h4 class="panel-title">Breakfast (7:30am - 10:30am)</h4>
-                        </div>
-                        <div class="panel-body">
-                            <table class="table table-condensed">
-                                <h1><small>Egg & Cheese (On Kaiser Roll)</small></h1>
-                                <tr ng-repeat="sub in subs.breakfast.small">
-                                    <td>
-                                        <h4 class="list-group-item-heading">{{ sub.name }}</h4>
-                                    </td>
-                                    <td>
-                                        <h4 class="list-group-item-heading pull-right">{{ sub.price | currency }}</h4>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table class="table table-condensed">
-                                <h1><small>Omlets (On 8 inch Sub Roll)</small></h1>
-                                <tr ng-repeat="sub in subs.breakfast.large">
-                                    <td>
-                                        <h4 class="list-group-item-heading">{{ sub.name }}</h4>
-                                    </td>
-                                    <td>
-                                        <h4 class="list-group-item-heading pull-right">{{ sub.price | currency }}</h4>
-                                    </td>
-                                </tr>
-                            </table>
+                    <!-- Toppings -->
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Toppings</h4>
+                            </div>
+                            <div class="panel-body">
+                                <!-- List group -->
+                                <table class="table">
+                                    <tr ng-repeat="topping_group in topping_list">
+                                        <td ng-repeat="topping in topping_group">
+                                            <div class="col-md-6 pull-left" ng-if="$index % 2 == 0">
+                                                <h4 class="list-group-item-heading">{{ topping }}</h4>
+                                            </div>
+                                            <div class="col-md-6 pull-right" ng-if="$index % 2 != 0">
+                                                <h4 class="list-group-item-heading">{{ topping }}</h4>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">
-                            <h4 class="panel-title">Lunch (7:30am - 3:00pm)</h4>
-                        </div>
-                        <div class="panel-body">
-                            <table class="table table-condensed">
-                                <h1><small>Subs (On 8 inch Sub Rolls)</small></h1>
-                                <tr ng-repeat="sub in subs.lunch">
-                                    <td>
-                                        <h4 class="list-group-item-heading">{{ sub.name }}</h4>
-                                        <p class="list-group-item-text">{{ sub.description }}</p>
-                                    </td>
-                                    <td>
-                                        <h4 class="list-group-item-heading pull-right">{{ sub.price | currency }}</h4>
-                                    </td>
-                                </tr>
-                            </table>
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Breakfast (7:30am - 10:30am)</h4>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-condensed">
+                                    <h1><small>Egg & Cheese (On Kaiser Roll)</small></h1>
+                                    <tr ng-repeat="sub in subs.breakfast.small">
+                                        <td>
+                                            <h4 class="list-group-item-heading">{{ sub.name }}</h4>
+                                        </td>
+                                        <td>
+                                            <h4 class="list-group-item-heading pull-right">{{ sub.price | currency }}</h4>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="table table-condensed">
+                                    <h1><small>Omlets (On 8 inch Sub Roll)</small></h1>
+                                    <tr ng-repeat="sub in subs.breakfast.large">
+                                        <td>
+                                            <h4 class="list-group-item-heading">{{ sub.name }}</h4>
+                                        </td>
+                                        <td>
+                                            <h4 class="list-group-item-heading pull-right">{{ sub.price | currency }}</h4>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-12">
-                    <div id="downloads" class="well">
-                        <h3>Downloads</h3>
-                        <h4>Menu</h4>
-                        <p>Please download our menu <a href="img/mango/Menu_2015.jpg">here</a>.</p>
-                        <h4>Fax sheet</h4>
-                        <p>Please download and use our fax sheet for any fax orders <a href="img/mango/fax_2013.pdf">here</a>.</p>
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Lunch (7:30am - 3:00pm)</h4>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-condensed">
+                                    <h1><small>Subs (On 8 inch Sub Rolls)</small></h1>
+                                    <tr ng-repeat="sub in subs.lunch">
+                                        <td>
+                                            <h4 class="list-group-item-heading">{{ sub.name }}</h4>
+                                            <p class="list-group-item-text">{{ sub.description }}</p>
+                                        </td>
+                                        <td>
+                                            <h4 class="list-group-item-heading pull-right">{{ sub.price | currency }}</h4>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-
-                    <h4 id="address">Addess</h4>
-                    <a href="https://www.google.com/maps/place/1317+Pennsylvania+Ave+SE/@38.880847,-76.987757,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7b83550c7ebd3:0x50442ee969e2889f"><p>1317 Pennsylvania Ave SE Washington, DC 20003</p></a>
+                    <div class="col-md-12">
+                        <div id="downloads" class="well">
+                            <h3>Downloads</h3>
+                            <h4>Menu</h4>
+                            <p>Please download our menu <a href="img/mango/Menu_2015.jpg">here</a>.</p>
+                            <h4>Fax sheet</h4>
+                            <p>Please download and use our fax sheet for any fax orders <a href="img/mango/fax_2013.pdf">here</a>.</p>
+                        </div>
+                        <h4 id="address">Addess</h4>
+                        <a href="https://www.google.com/maps/place/1317+Pennsylvania+Ave+SE/@38.880847,-76.987757,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7b83550c7ebd3:0x50442ee969e2889f"><p>1317 Pennsylvania Ave SE Washington, DC 20003</p></a>
+                    </div>
                 </div>
-            </div>
-            <div class="footer">
-                <p>Mangialardo's &trade; 2014 &middot; <a href="https://www.facebook.com/pages/Mangialardos/217971358293248"><img src="img/mango/facebook-logo.png" style="width: 25px;"> Follow us on facebook</a></p>
-            </div>
-            </div> <!-- /container -->
-            <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-            <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
-        </body>
-    </html>
+                <div class="footer">
+                    <p>Mangialardo's &trade; 2014 &middot; <a href="https://www.facebook.com/pages/Mangialardos/217971358293248"><img src="img/mango/facebook-logo.png" style="width: 25px;"> Follow us on facebook</a></p>
+                </div>
+                </div> <!-- /container -->
+                <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+                <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+            </body>
+        </html>

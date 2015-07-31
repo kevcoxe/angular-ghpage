@@ -21,7 +21,7 @@ app.controller("myCtrl", function($scope) {
 	    		{"name": "Ham & Cheese", "price": 6.00},
 	    		{"name": "Pepperoni & Cheese", "price": 6.00},
     		]}
-    	],
+    	,
     	"lunch": [
     		{"name":"Cold Cut", "description":"ham, salami, mortadella, provolone cheese", "price":6.50},
     		{"name":'"G" Man', "description":"ham, salami, mortadella, pepperoni, fontina cheese, provolone cheese, oregano", "price":7.00},

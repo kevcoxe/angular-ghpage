@@ -57,10 +57,10 @@
                                 <tr>
                                     <td ng-repeat="type in bread_types">
                                         <div class="col-md-6 pull-left" ng-if="$index % 2 == 0">
-                                            <h4 class="list-group-item-heading">{{ type }}</h4>
+                                            <h4 class="list-group-item-heading center-block">{{ type }}</h4>
                                         </div>
                                         <div class="col-md-6 pull-right" ng-if="$index % 2 != 0">
-                                            <h4 class="list-group-item-heading">{{ type }}</h4>
+                                            <h4 class="list-group-item-heading center-block">{{ type }}</h4>
                                         </div>
                                     </td>
                                 </tr>
@@ -80,8 +80,12 @@
                             <table class="table table-condensed">
                                 <tr ng-repeat="topping_group in topping_list">
                                     <td ng-repeat="topping in topping_group">
-                                        <h4 class="list-group-item-heading pull-left" ng-if="$index % 2 == 0">{{ topping }}</h4>
-                                        <h4 class="list-group-item-heading pull-right" ng-if="$index % 2 != 0">{{ topping }}</h4>
+                                        <div class="col-md-6 pull-left" ng-if="$index % 2 == 0">
+                                            <h4 class="list-group-item-heading center-block">{{ topping }}</h4>
+                                        </div>
+                                        <div class="col-md-6 pull-right" ng-if="$index % 2 != 0">
+                                            <h4 class="list-group-item-heading center-block">{{ topping }}</h4>
+                                        </div>
                                     </td>
                                 </tr>
                             </table>

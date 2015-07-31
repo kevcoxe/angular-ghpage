@@ -113,8 +113,8 @@
                                 <h4>Subs (On 8 inch Sub Rolls)</h4>
                                 <tr ng-repeat="sub in subs.lunch">
                                     <td>
-                                        <h3>{{ sub.name }}</h3>
-                                        <p>{{ sub.description }}</p>
+                                        <h4 class="list-group-item-heading">{{ sub.name }}</h4>
+                                        <p class="list-group-item-text">{{ sub.description }}</p>
                                     </td>
                                     <td>{{ sub.price | currency }}</td>
                                 </tr>

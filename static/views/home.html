@@ -1,31 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html ng-app="myApp">
-  <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-  <title>Hello AngularJS - Hello World</title>
-  <link rel="stylesheet" href="http://getbootstrap.com/examples/jumbotron/jumbotron.css">
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-  <script src="static/js/app.js"></script>
-  <script src="static/js/ui-bootstrap-0.13.0.js"></script>
 
-  <style>
-  .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
-  .main {padding-top: 20px;}
-  </style>
+<div ng-include="'static/views/head.html'"></div>
 
-</head>
-<body ng-controller="MyCtrl">
-  
-  <!-- <div ng-view></div> -->
-
-  <div ng-include="'static/views/test.html'"></div>
-
-  <!-- <div class="container main">
+<div class="container main">
     <div class="row">
       <div class="col-md-3">
         <div class="panel panel-default">
@@ -105,7 +81,4 @@
         </div>
       </div>
     </div>
-  </div> -->
-
-</body>
-</html>
+  </div> <!-- /container -->

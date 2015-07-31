@@ -1,14 +1,14 @@
 var app = angular.module("myApp", []);
 app.controller("myCtrl", function($scope) {
 
-	$scope.bread_types ["Hard Roll", "Soft Roll"];
+	$scope.bread_types = ["Hard Roll", "Soft Roll"];
 
 	$scope.topping_list = [
 		["Lettuce","Tomato"],
 		["Mayonnaise","Onion"],
 		["Oil","Vinegar"],
 		["Hot or Sweet Peppers","Deli Mustard"]
-	]
+	];
 
     $scope.subs = {
     	"breakfast": {

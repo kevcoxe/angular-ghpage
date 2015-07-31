@@ -1,14 +1,12 @@
 var app = angular.module("myApp", []);
 app.controller("myCtrl", function($scope) {
 
-	$scope.test = {
-		"top": [
-			'a',
-			'b',
-			'c',
-			'd',
-		]
-	};
+	$scope.test = [
+		'a',
+		'b',
+		'c',
+		'd',
+	];
 
     $scope.subs = {
     	"breakfast": {

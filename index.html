@@ -55,8 +55,7 @@
                             <!-- List group -->
                             <table class="table table-condensed">
                                 <tr>
-                                    <td>Hard Roll</td>
-                                    <td>Soft Roll</td>
+                                    <td ng-repeat="type in bread_types">{{ type }}</td>
                                 </tr>
                             </table>
                         </div>
@@ -71,22 +70,16 @@
                         </div>
                         <div class="panel-body">
                             <!-- List group -->
+                            <ul class="list-group">
+                                <li class="list-group-item">Cras justo odio</li>
+                                <li class="list-group-item">Dapibus ac facilisis in</li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                            </ul>
                             <table class="table table-condensed">
-                                <tr>
-                                    <td>Lettuce</td>
-                                    <td>Tomato</td>
-                                </tr>
-                                <tr>
-                                    <td>Mayonnaise</td>
-                                    <td>Onion</td>
-                                </tr>
-                                <tr>
-                                    <td>Oil</td>
-                                    <td>Vinegar</td>
-                                </tr>
-                                <tr>
-                                    <td>Hot or Sweet Peppers</td>
-                                    <td>Deli Mustard</td>
+                                <tr ng-repeat="topping_group in topping_list">
+                                    <td ng-repeat="topping in topping_group">{{ topping }}</td>
                                 </tr>
                             </table>
                         </div>
@@ -102,6 +95,11 @@
                             <table class="table table-condensed">
                                 <h4>Egg & Cheese (On Kaiser Roll)</h4>
                                 <tr ng-repeat="sub in subs.breakfast.small">
+                                    <td>{{ sub.name }}</td>
+                                    <td>{{ sub.price | currency }}</td>
+                                </tr>
+                                <h4>Omlets (On 8 inch Sub Roll)</h4>
+                                <tr ng-repeat="sub in subs.breakfast.large">
                                     <td>{{ sub.name }}</td>
                                     <td>{{ sub.price | currency }}</td>
                                 </tr>

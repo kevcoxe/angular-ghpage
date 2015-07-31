@@ -4,7 +4,16 @@
 		<script src="app/app.js"></script>
 	</head>
 	<body ng-app="myApp" ng-controller="myCtrl">
-		<h1>Test</h1>
-		<h2>hello {{ firstName }}</h2>
+		<h2>Breakfast</h2>
+		<h3>Small</h3>
+		<ul>
+			<li ng-repeat="sub in subs.breakfast.small">{{ sub.name }}</li>
+		</ul>
+
+		<h3>large</h3>
+		<ul>
+			<li ng-repeat="sub in subs.breakfast.large">{{ sub.name }}</li>
+		</ul>
+
 	</body>
 </html>

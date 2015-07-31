@@ -5,9 +5,10 @@
 	</head>
 	<body ng-controller="myCtrl">
 		
-		<h2>Test</h2>
+		<h2>Breakfast</h2>
+		<h3>Small</h3>
 		<ul>
-			<li ng-repeat="x in test">{{ x }}</li>
+			<li ng-repeat="sub in subs.breakfast.small">{{ sub.name }}</li>
 		</ul>
 
 	</body>

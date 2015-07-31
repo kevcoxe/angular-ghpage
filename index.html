@@ -91,6 +91,8 @@
                                     <td>{{ sub.name }}</td>
                                     <td>{{ sub.price | currency }}</td>
                                 </tr>
+                            </table>
+                            <table class="table table-condensed">
                                 <h4>Omlets (On 8 inch Sub Roll)</h4>
                                 <tr ng-repeat="sub in subs.breakfast.large">
                                     <td>{{ sub.name }}</td>
@@ -100,7 +102,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12"></div>
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Lunch (7:30am - 3:00pm)</h4>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-condensed">
+                                <h4>Subs (On 8 inch Sub Rolls)</h4>
+                                <tr ng-repeat="sub in subs.lunch">
+                                    <td>
+                                        <h3>{{ sub.name }}</h3>
+                                        <p>{{ sub.description }}</p>
+                                    </td>
+                                    <td>{{ sub.price | currency }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-12"></div>
             </div>
             <div class="footer">

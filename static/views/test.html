@@ -1,13 +1,24 @@
 
 <div ng-controller="MyCtrl">
-  <style>
-    .body {
-      background-color: {{ color }};
-    }
-  </style>
 
-  <div class="body">
-    <h1>Test page</h1>
+  <span ng-repeat="(key, value) in myStyle">
+    <label>{{ key }}</label>
+    <input ng-model="myStyle[key]" type="text" class="form-control"/>
+  </span>
+
+  <br>
+  <div class="form-group">
+      <input type="text" ng-model="newKey" class="form-control" placeholder="key"/>
+      <br>
+      <input type="text" ng-model="newValue" class="form-control" placeholder="value"/>
+      <br>
+      <button type="button" class="btn btn-success" ng-click="add_style()">Add Style</button>
+  </div>
+
+  <br>
+  <div ng-style="myStyle">
+    This is a test
+    <h1>More of a test</h1>
   </div>
 
 </div>

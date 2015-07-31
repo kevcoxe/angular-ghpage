@@ -55,7 +55,8 @@
                             <!-- List group -->
                             <table class="table table-condensed">
                                 <tr>
-                                    <td ng-repeat="type in bread_types">{{ type }}</td>
+                                    <h4 class="list-group-item-heading pull-left" ng-if="$index % 2 == 0">{{ type }}</h4>
+                                    <h4 class="list-group-item-heading pull-right" ng-if="$index % 2 != 0">{{ type }}</h4>
                                 </tr>
                             </table>
                         </div>
@@ -72,7 +73,10 @@
                             <!-- List group -->
                             <table class="table table-condensed">
                                 <tr ng-repeat="topping_group in topping_list">
-                                    <td ng-repeat="topping in topping_group">{{ topping }}</td>
+                                    <td ng-repeat="topping in topping_group">
+                                        <h4 class="list-group-item-heading pull-left" ng-if="$index % 2 == 0">{{ topping }}</h4>
+                                        <h4 class="list-group-item-heading pull-right" ng-if="$index % 2 != 0">{{ topping }}</h4>
+                                    </td>
                                 </tr>
                             </table>
                         </div>

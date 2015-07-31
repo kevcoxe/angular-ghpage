@@ -55,8 +55,14 @@
                             <!-- List group -->
                             <table class="table table-condensed">
                                 <tr>
-                                    <h4 class="list-group-item-heading pull-left" ng-if="$index % 2 == 0">{{ type }}</h4>
-                                    <h4 class="list-group-item-heading pull-right" ng-if="$index % 2 != 0">{{ type }}</h4>
+                                    <td ng-repeat="type in bread_types">
+                                        <div class="col-md-6 pull-left" ng-if="$index % 2 == 0">
+                                            <h4 class="list-group-item-heading">{{ type }}</h4>
+                                        </div>
+                                        <div class="col-md-6 pull-right" ng-if="$index % 2 != 0">
+                                            <h4 class="list-group-item-heading">{{ type }}</h4>
+                                        </div>
+                                    </td>
                                 </tr>
                             </table>
                         </div>

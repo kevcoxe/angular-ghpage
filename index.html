@@ -82,20 +82,24 @@
                     <div class="panel panel-default">
                         <!-- Default panel contents -->
                         <div class="panel-heading">
-                            <h4 class="panel-title">Toppings</h4>
+                            <h4 class="panel-title">Breakfast (7:30am - 10:30am)</h4>
                         </div>
                         <div class="panel-body">
                             <table class="table table-condensed">
                                 <h4>Egg & Cheese (On Kaiser Roll)</h4>
                                 <tr ng-repeat="sub in subs.breakfast.small">
-                                    <td>{{ sub.name }}</td>
+                                    <td>
+                                        <h4 class="list-group-item-heading">{{ sub.name }}</h4>
+                                    </td>
                                     <td>{{ sub.price | currency }}</td>
                                 </tr>
                             </table>
                             <table class="table table-condensed">
                                 <h4>Omlets (On 8 inch Sub Roll)</h4>
                                 <tr ng-repeat="sub in subs.breakfast.large">
-                                    <td>{{ sub.name }}</td>
+                                    <td>
+                                        <h4 class="list-group-item-heading">{{ sub.name }}</h4>
+                                    </td>
                                     <td>{{ sub.price | currency }}</td>
                                 </tr>
                             </table>

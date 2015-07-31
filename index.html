@@ -88,10 +88,10 @@
                             <table class="table table-condensed">
                                 <h4>Egg & Cheese (On Kaiser Roll)</h4>
                                 <tr ng-repeat="sub in subs.breakfast.small">
-                                    <td>
+                                    <td class="pull-left">
                                         <h4 class="list-group-item-heading">{{ sub.name }}</h4>
                                     </td>
-                                    <td>
+                                    <td class="pull-right">
                                         <h4 class="list-group-item-heading">{{ sub.price | currency }}</h4>
                                     </td>
                                 </tr>
@@ -99,10 +99,10 @@
                             <table class="table table-condensed">
                                 <h4>Omlets (On 8 inch Sub Roll)</h4>
                                 <tr ng-repeat="sub in subs.breakfast.large">
-                                    <td>
+                                    <td class="pull-left">
                                         <h4 class="list-group-item-heading">{{ sub.name }}</h4>
                                     </td>
-                                    <td>
+                                    <td class="pull-right">
                                         <h4 class="list-group-item-heading">{{ sub.price | currency }}</h4>
                                     </td>
                                 </tr>
@@ -120,11 +120,11 @@
                             <table class="table table-condensed">
                                 <h4>Subs (On 8 inch Sub Rolls)</h4>
                                 <tr ng-repeat="sub in subs.lunch">
-                                    <td>
+                                    <td class="pull-left">
                                         <h4 class="list-group-item-heading">{{ sub.name }}</h4>
                                         <p class="list-group-item-text">{{ sub.description }}</p>
                                     </td>
-                                    <td>
+                                    <td class="pull-right">
                                         <h4 class="list-group-item-heading">{{ sub.price | currency }}</h4>
                                     </td>
                                 </tr>
@@ -140,7 +140,7 @@
                         <h4>Fax sheet</h4>
                         <p>Please download and use our fax sheet for any fax orders <a href="img/mango/fax_2013.pdf">here</a>.</p>
                     </div>
-                    
+
                     <h4 id="address">Addess</h4>
                     <a href="https://www.google.com/maps/place/1317+Pennsylvania+Ave+SE/@38.880847,-76.987757,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7b83550c7ebd3:0x50442ee969e2889f"><p>1317 Pennsylvania Ave SE Washington, DC 20003</p></a>
                 </div>
